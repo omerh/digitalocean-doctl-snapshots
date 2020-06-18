@@ -11,5 +11,5 @@ To use this container just create a new deveoper token in <https://cloud.digital
 ```bash
 docker run --rm \
     --env=DIGITALOCEAN_ACCESS_TOKEN=[your digital ocean token here] \
-    digitalocean-doctl-snapshots:latest
+    omerha/digitalocean-doctl-snapshots:latest
 ```
