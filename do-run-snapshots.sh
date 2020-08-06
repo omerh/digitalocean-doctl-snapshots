@@ -19,7 +19,7 @@ for ID in $IDS; do
         echo "There are $SNAPSHOTS, deleting the oldest one"
         echo "Deleting snapshot:"
         doctl compute snapshot list --no-header | grep $PREFIX-$NAME | head -1
-        SNAPSHOTID=$(doctl compute snapshot list --no-header | grep $PREFIX-$NAME | head -1)
+        SNAPSHOTID=$(doctl compute snapshot list --no-header | grep $PREFIX-$NAME | head -1 | awk '{print $1}')
         doctl compute snapshot delete $SNAPSHOTID --force        
     fi
 done
